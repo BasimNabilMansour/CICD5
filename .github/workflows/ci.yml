@@ -1,15 +1,15 @@
 on: 
-    pull_request:
+    push:
 
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
     steps:  
       - name: checkout repository
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@v4
 
       - name: Set up Node.js 
-        uses: actions/setup-node@v7.0.0
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
